@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">
+	<title>Онлайн калькулятор</title>
+</head>
+<body>
+	<div class="wapper">
+		<div class="header">
+			<h1>Онлайн калькулятор</h1>
+			<h2>Мое первое web-приложение на JavaScript</h2>
+		</div>
+		<div class="content">
+			<form name="my">
+				<input id="one" value="1">
+				<select id="three">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="/">/</option>
+					<option value="*">*</option>
+				</select>
+				<input id="two" value="2">
+				<a id="calc" class="submit" href="#">Решить</a>
+			</form>
+			<div class="ans">
+				<h1>Ответ:</h1>
+				<div id="rezults">Пока что неизвестен.</div>
+			</div>
+			<h2>Решить уравнение:</h2>
+			<p>Квадратное уравнение имеет вид: a<b>x</b><sup>2</sup> + b<b>x</b> + <b>c</b> = 0</p>
+			<form name="my2">
+				<input id="A" placeholder="A" required>
+				<input id="B" placeholder="B" required>
+				<input id="C" placeholder="C" required>
+				<a id="equ" class="submit2" href="#">Решить</a>
+			</form>
+			<div class="ans2">
+				<h1>Ответ:</h1>
+				<div id="rezults2">Введите значения.</div>
+			</div>
+			<h2>IP-калькулятор</h2>
+			<p>Позволяет определить к какому классу принадлежит ip-адрес</p>
+			<form name="my3">
+				<input id="ip" placeholder="IP-адрес" required>
+				<a id="ipcalc" class="submit3" href="#">Узнать</a>
+			</form>
+			<div class="ans3">
+				<h1>Ответ:</h1>
+				<div id="rezults3">Введите значения.</div>
+			</div>	
+		</div>
+		<div class="footer">
+			<p class="copy" onclick="view('ftr'); return false">Grankin &copy; 2015</p>
+			<p id="ftr">Данное приложение писалось исключительно для изучения языка JavaScript и его возможностей, алгоритмы, которые были применины здесь, - несовершенны, поэтому не стоит сильно полагаться на данный калькулятор.</p>
+		</div>
+	</div>
+	<script src="./script.js"></script>
+</body>
+</html>
