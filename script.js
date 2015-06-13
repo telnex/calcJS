@@ -71,6 +71,26 @@ function toBIN(num) {
 	}
 	return out || "0";
 }
+/*
+ * Позаимствовал здеь http://pranet.ru/support/calculators/ip/
+ */
+function _checkIP(ip)
+{
+	var s = 0;
+	var ipArray = ip.split(".");
+	// проверяем каждую секцию ипа
+	for (var i = 0; i < ipArray.length; i++)
+	{
+		// если это не число, возвратить ошибку
+		if (isNaN(ipArray[i]) || ipArray[i] > 255 || ipArray[i] < 0 || ipArray[i].length == 0) 
+			return false;
+		s++; // увеличить кол-во секций
+	}
+	// если секций больше или меньше 4, возвратить ошибку
+	if (s < 4 || s > 4)
+		return false;
+	return ip;
+}
 //--------------------------
 //number of hosts = 2 ^ (32 - bitcount) - 2
 //
@@ -83,8 +103,8 @@ function toBIN(num) {
 //--------------------------
 ipcalc.onclick = function() {
 	var ip = document.getElementById('ip').value;
-	if (ip != '') {
-		if (Number.isNaN(+ip.substring(0,4)) != true) {
+	if ( ip.length != 0 ) {
+		if (_checkIP(ip) != false) {
 			ip = toBIN(ip.substring(0,4));
 			if (ip.substring(0,1)=="0") rezults3.innerHTML="Class A";
 			else if (ip.substring(0,2)=="10") rezults3.innerHTML="Class B";
