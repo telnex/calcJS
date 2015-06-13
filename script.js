@@ -106,11 +106,11 @@ ipcalc.onclick = function() {
 	if ( ip.length != 0 ) {
 		if (_checkIP(ip) != false) {
 			ip = toBIN(ip.substring(0,4));
-			if (ip.substring(0,1)=="0") rezults3.innerHTML="Class A";
-			else if (ip.substring(0,2)=="10") rezults3.innerHTML="Class B";
-			else if (ip.substring(0,3)=="110") rezults3.innerHTML="Class C";
-			else if (ip.substring(0,4)=="1110") rezults3.innerHTML="Class D";
-			else if (ip.substring(0,5)=="11110") rezults3.innerHTML="Class E";
+			if (ip.substring(0,1)=="0") rezults3.innerHTML="Class A<br/>Маска: 255.0.0.0<br/>Стандартный класс";
+			else if (ip.substring(0,2)=="10") rezults3.innerHTML="Class B<br/>Маска: 255.255.0.0<br/>Стандартный класс";
+			else if (ip.substring(0,3)=="110") rezults3.innerHTML="Class C<br/>Маска: 255.255.255.0<br/>Стандартный класс";
+			else if (ip.substring(0,4)=="1110") rezults3.innerHTML="Class D<br/>Маска: 224.0.0.0<br/>Многоадресатная рассылка";
+			else if (ip.substring(0,5)=="11110") rezults3.innerHTML="Class E<br/>Экспериментальный класс";
 			else rezults3.innerHTML="Class invalid";
 		}
 		else rezults3.innerHTML="Проверьте правильность ввода данных!";

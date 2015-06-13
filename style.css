@@ -125,6 +125,13 @@ body {
 	font: 12px Tahoma;
 	color: #D3D3D3;
 }
+	.footer a {
+		text-decoration: none;
+		color: #D3D3D3;
+	}
+	.footer a:hover {
+		color: #F1F0F0;
+	}
 	.copy {
 		display: inline-block;
 		border-bottom: 1px dashed rgba(211, 211, 211, 0.4);
